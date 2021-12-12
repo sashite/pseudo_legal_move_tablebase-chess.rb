@@ -30,7 +30,7 @@ gem install pseudo_legal_move_tablebase-chess
 
 ## Examples
 
-Let's list the conditions for a sente King to move from square `0` to square `1`:
+Let's list the conditions for a white King to move from square `0` to square `1`:
 
 ```ruby
 PseudoLegalMoveTablebase::Chess::DB.dig("C:-K", 0, 1) # => [{1=>:enemy}, {1=>nil}]
@@ -41,7 +41,7 @@ This move is allowed if one of these conditions is met:
 - an enemy is present on square `1` (capture);
 - the square `1` is a free square.
 
-Let's list the conditions for a gote Rook to move from square `0` to square `2`:
+Let's list the conditions for a black Rook to move from square `0` to square `2`:
 
 ```ruby
 PseudoLegalMoveTablebase::Chess::DB.dig("c:r", 0, 2) # => [{1=>nil, 2=>:enemy}, {1=>nil, 2=>nil}]
