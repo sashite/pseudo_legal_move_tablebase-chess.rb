@@ -1,0 +1,19 @@
+---
+header: |
+  # frozen_string_literal: true
+
+  require "simplecov"
+
+  SimpleCov.command_name "Brutal test suite"
+  SimpleCov.start
+
+  require "./lib/pseudo_legal_move_tablebase/chess"
+
+subject: |
+  PseudoLegalMoveTablebase::%{chess_variant}::DB
+
+contexts:
+  chess_variant: Chess
+
+actuals:
+  - "%{subject}.keys"
